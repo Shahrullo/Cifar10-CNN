@@ -7,6 +7,9 @@ Depending on the exercise in CNN part I made a model to work on the project.
 
 
 
+## Author 
+
+* Shahrullohon Lutfillohonov
 
 
 ## License
