@@ -5,7 +5,7 @@ Depending on the exercise in CNN part I made a model to work on the project. Wit
 
 ## About the project
 The project shows classifying of CIFAR-10 database. The database is consisted of images that are small color that fall into one of ten classes.
-[CIFAR10](https://github.com/Shahrullo/Cifar10-CNN/blob/main/notebook_ims/cifar_data.png)
+<img src="https://github.com/Shahrullo/Cifar10-CNN/blob/main/notebook_ims/cifar_data.png">
 
 
 ## Author 
