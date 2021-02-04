@@ -55,7 +55,47 @@ We defined a CNN architecture. Instead of an MLP, which used linear, fully-conne
 
 We used CNN Layer blocks. Here is the summary of our model
 
-<img src="https://github.com/Shahrullo/Cifar10-CNN/blob/main/notebook_ims/summary.PNG">
+```
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 32, 32, 32]             896
+       BatchNorm2d-2           [-1, 32, 32, 32]              64
+              ReLU-3           [-1, 32, 32, 32]               0
+            Conv2d-4           [-1, 64, 32, 32]          18,496
+              ReLU-5           [-1, 64, 32, 32]               0
+         MaxPool2d-6           [-1, 64, 16, 16]               0
+            Conv2d-7          [-1, 128, 16, 16]          73,856
+       BatchNorm2d-8          [-1, 128, 16, 16]             256
+              ReLU-9          [-1, 128, 16, 16]               0
+           Conv2d-10          [-1, 128, 16, 16]         147,584
+             ReLU-11          [-1, 128, 16, 16]               0
+        MaxPool2d-12            [-1, 128, 8, 8]               0
+        Dropout2d-13            [-1, 128, 8, 8]               0
+           Conv2d-14            [-1, 256, 8, 8]         295,168
+      BatchNorm2d-15            [-1, 256, 8, 8]             512
+             ReLU-16            [-1, 256, 8, 8]               0
+           Conv2d-17            [-1, 256, 8, 8]         590,080
+             ReLU-18            [-1, 256, 8, 8]               0
+        MaxPool2d-19            [-1, 256, 4, 4]               0
+          Dropout-20                 [-1, 4096]               0
+           Linear-21                 [-1, 1024]       4,195,328
+             ReLU-22                 [-1, 1024]               0
+           Linear-23                  [-1, 512]         524,800
+             ReLU-24                  [-1, 512]               0
+          Dropout-25                  [-1, 512]               0
+           Linear-26                   [-1, 10]           5,130
+================================================================
+Total params: 5,852,170
+Trainable params: 5,852,170
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 3.96
+Params size (MB): 22.32
+Estimated Total Size (MB): 26.30
+----------------------------------------------------------------
+```
 
 ## Training results
 
@@ -70,8 +110,22 @@ See the visual result over iteration:
 
 The test data showing how well the neural network is modeling the data
 
-<img src="https://github.com/Shahrullo/Cifar10-CNN/blob/main/notebook_ims/accuracy.PNG">
+```
+Test Loss: 0.530732
 
+Test Accuracy of airplane: 85% (850/1000)
+Test Accuracy of automobile: 92% (924/1000)
+Test Accuracy of  bird: 76% (768/1000)
+Test Accuracy of   cat: 69% (691/1000)
+Test Accuracy of  deer: 83% (839/1000)
+Test Accuracy of   dog: 76% (765/1000)
+Test Accuracy of  frog: 87% (879/1000)
+Test Accuracy of horse: 89% (896/1000)
+Test Accuracy of  ship: 91% (911/1000)
+Test Accuracy of truck: 92% (923/1000)
+
+Test Accuracy (Overall): 84% (8446/10000)
+```
 
 ## Author 
 
